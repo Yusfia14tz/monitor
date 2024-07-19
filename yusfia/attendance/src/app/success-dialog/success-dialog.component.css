@@ -1,0 +1,18 @@
+/* success-dialog.component.css */
+:host {
+    display: block;
+    padding: 20px;
+    margin: 10vh auto; /* Center vertically and horizontally */
+    max-width: 80%; /* Responsive max-width */
+  }
+  
+  .mat-dialog-content {
+    text-align: center;
+    overflow: auto; /* Enable scrolling if content exceeds dialog size */
+  }
+  
+  .mat-dialog-actions {
+    justify-content: center;
+    margin-top: 20px;
+  }
+  

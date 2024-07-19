@@ -1,0 +1,19 @@
+<div class="h"></div>
+<div class="container">
+    <h2>Attendance Tracking</h2>
+    <form (ngSubmit)="submitAttendance()">
+      <mat-form-field appearance="fill">
+        <mat-label>Attendance Date</mat-label>
+        <input matInput [(ngModel)]="attendanceDate" name="attendanceDate" type="date" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Clock In</mat-label>
+        <input matInput [(ngModel)]="clockIn" name="clockIn" type="time" >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Clock Out</mat-label>
+        <input matInput [(ngModel)]="clockOut" name="clockOut" type="time">
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+  </div>

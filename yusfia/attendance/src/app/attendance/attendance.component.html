@@ -1,0 +1,39 @@
+<mat-sidenav-container class="sidenav-container">
+  
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar>Worker Details</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/attendance2">Attendance</a>
+      <a mat-list-item routerLink="/history">Attendance History</a>
+      <a mat-list-item href="/attendance">Report</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <ng-container *ngIf="isHandset$ | async; else desktopToolbar">
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      </ng-container>
+      <ng-template #desktopToolbar>
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>Worker attendance</span>
+      </ng-template>
+    </mat-toolbar>
+
+    
+    <div style="padding: 20px;">
+      <img src="assets/images/pic.jpg" alt="Worker Picture" class="worker">
+    </div>
+    <div class="outer-footer">
+      <p>Copyright &copy; 2024 Yusfia Developer</p>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

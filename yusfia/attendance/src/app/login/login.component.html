@@ -1,0 +1,28 @@
+<div class="spacer"></div>
+<div class="login-container">
+    <form (ngSubmit)="onSubmit(loginForm)">
+      <p>LOGIN HERE</p>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Username</mat-label>
+        <input matInput type="text" [(ngModel)]="username" name="username" required>
+      </mat-form-field>
+      
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [(ngModel)]="password" name="password" required>
+      </mat-form-field>
+  
+      <div class="remember-me">
+        <mat-checkbox [(ngModel)]="rememberMe" name="rememberMe">Remember me</mat-checkbox>
+      </div>
+  <div class="sign">
+      <button mat-raised-button color="primary" type="submit"> <a href="attendance">Login</a></button>
+    </div>
+    </form>
+  
+    <div class="options">
+      <a href="password">Forgot Password?</a>
+      <a (click)="register()">Don't have an account? Register here</a>
+    </div>
+  </div>
+  
